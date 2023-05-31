@@ -1,0 +1,184 @@
+<div>
+    {{make}}
+    <br>
+    {{model}} ({{year}})
+    <br>
+    {{color}}
+    <hr>
+    <section>
+        <strong>Features</strong>
+        <ul>
+            {{#with features}}
+                {{#with interior}}
+                    {{#with seats}}
+                        <li>
+                            {{material}}
+                            <br>
+                            {{color}}
+                            <br>
+                             {{#unless heated includeZero=true}}  {{/unless}}
+
+                            {{#unless heated}}
+                                {{#if heated includeZero=true}} 
+                                {{/if}}
+                            {{/unless}}
+
+                            {{#unless ventilated includeZero=true}}  {{/unless}}
+
+                            {{#unless ventilated}}
+                                {{#if ventilated includeZero=true}} 
+                                {{/if}}
+                            {{/unless}}
+                        </li>
+                    {{/with}}
+                    <strong>Dashboard</strong>
+                    <ul>
+                        {{#with dashboard}}
+                        <li>
+                            {{material}}
+                            <br>
+                            {{color}}
+                            <div>Display</div>
+                            <ul>
+                                {{#with display}}
+                                    <li>{{type}}
+                                        <br>
+                                        {{size}}
+                                        <br>
+                                        {{resolution}}
+                                    </li>
+                                {{/with}}
+                            </ul>
+                        </li>
+                        {{/with}}
+                        <strong>Audio</strong>
+                        <ul>
+                            {{#with audio}}
+                                <li>
+                                    {{system}}
+                                    <br>
+                                    {{speakers}}
+                                </li>
+                            {{/with}}
+                        </ul>
+                    </ul>
+                {{/with}}
+                <strong>Exterior</strong>
+                <ul>
+                    {{#with exterior}}
+                        {{#with wheels}}
+                            <li>
+                                {{size}}
+                                <br>
+                                {{type}}
+                                <br>
+                                {{color}}
+                            </li>
+                        {{/with}}
+                        <ul>
+                        {{#with headlights}}
+                            <li>
+                                {{type}}
+                                <br>
+                                {{brightness}}
+                            </li>
+                        {{/with}}
+                        </ul>
+                        <strong>Sunroof</strong>
+                        <ul>
+                            {{#with sunroof}}
+                                <li>
+                                    {{type}}
+                                    <br>
+                                    {{size}}
+                                </li>
+                            {{/with}}
+                        </ul>
+                    {{/with}}
+                    <strong>Safety</strong>
+                    <ul>
+                        {{#with safety}}
+                        {{#with airbags}}
+                            <li>
+                                {{front}}
+                                <br>
+                                {{side}}
+                                <br>
+                                {{knee}}
+                                <br>
+                                {{rear}}
+                            </li>
+                        {{/with}}
+                        {{/with}}
+                    </ul>
+                </ul>
+            {{/with}}
+        </ul>
+        <section>
+            <strong>Engine</strong>
+            <ul>
+                {{#with engine}}
+                    <li>
+                        {{type}}
+                        <br>
+                        {{displacement}}
+                        <br>
+                        {{horsepower}}
+                        <br>
+                        {{torque}}
+                        <br>
+                        <ul>
+                            {{#with transmission}}
+                                <li>
+                                    {{type}}
+                                    <br>
+                                    {{gears}}
+                                </li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                {{/with}}
+            </ul>
+        </section>
+        <section>
+            <strong>Fuel_economy</strong>
+            <ul>
+                {{#with fuel_economy}}
+                <li>
+                    {{city}}
+                    <br>
+                    {{highway}}
+                    <br>
+                    {{combined}}
+                </li>
+                {{/with}}
+            </ul>
+        </section>
+        <section>
+            <strong>Price</strong>
+            <ul>
+                {{#with price}}
+                    <li>
+                        {{base}}
+                        <br>
+                        {{destination}}
+                        <br>
+                        <div>Options</div>
+                        <ul>
+                            {{#with options}}
+                            <li>
+                                {{navigation}}
+                                <br>
+                                {{ moonroof}}
+                                <br>
+                                {{premium_paint}}
+                            </li>
+                            {{/with}}
+                        </ul>
+                        <strong>Price: {{total}} </strong>
+                    </li>
+                {{/with}}
+            </ul>
+        </section>
+    </section>
+</div>
