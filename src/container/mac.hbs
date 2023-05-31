@@ -1,0 +1,142 @@
+<div>
+    <h1>{{name}}</h1>
+    <br>
+    {{description}}
+    <br>
+    {{price}}
+    <br>
+    <strong>Category:</strong> {{category}}
+    <br>
+    <hr>
+    <section>
+        <ul>
+            {{#with features}}
+            <strong>Processor</strong>
+                {{#with processor}}
+                    <li>
+                        {{brand}}
+                        <br>
+                        {{model}}
+                        <br>
+                        {{speed}}
+                        <br>
+                        {{cores}}
+                        <br>
+                        {{cache}}
+                    </li>
+                {{/with}}
+                <strong>Memory</strong>
+                <ul>
+                    {{#with memory}}
+                    <li>
+                        {{type}}
+                        <br>
+                        {{size}}
+                        <br>
+                        {{speed}}
+                    </li>
+                    {{/with}}
+                    <strong>Storage</strong>
+                <ul>
+                    {{#with storage}}
+                    <li>
+                        {{type}}
+                        <br>
+                        {{size}}
+                    </li>
+                    {{/with}}
+                </ul>
+
+                 <strong>Display</strong>
+                <ul>
+                    {{#with display}}
+                    <li>
+                        {{size}}
+                        <br>
+                        {{resolution}}
+                        <br>
+                        {{technology}}
+                        <br>
+                        {{color_space}}
+                        <br>
+                        {{brightness}}
+                        <br>
+                        {{refresh_rate}}
+                    </li>
+                    {{/with}}
+                </ul>
+                <strong>Graphics</strong>
+                 <ul>
+                    {{#with graphics}}
+                    <li>
+                        {{brand}}
+                        <br>
+                        {{model}}
+                        <br>
+                        {{memory}}
+                        
+                    {{/with}}
+                </ul>
+
+                <strong>Ports</strong>
+                 <ul>
+                    {{#each ports}}
+                    <li>
+                        {{type}}
+                        <br>
+                        {{cont}}
+                        <br>
+                        <ul>
+                            {{#each features}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                        
+                    {{/each}}
+                </ul>
+                <strong>Battery</strong>
+                <ul>
+                    {{#with battery}}
+                        <li>
+                            {{type}}
+                            <br>
+                            {{capacity}}
+                            <br>
+                            {{life}}
+                        </li>
+                    {{/with}}
+                    {{weight}}
+                </ul>
+                
+
+                <strong>Dimensions</strong>
+                <ul>
+                    {{#with dimensions}}
+                        <li>
+                            {{height}}
+                            <br>
+                            {{width}}
+                            <br>
+                            {{depth}}
+                        </li>
+                    {{/with}}
+                </ul>
+                <br>
+                <hr>
+                {{operating_system}}
+                <hr>
+
+                <strong>Accessories</strong>
+                <ul>
+                    {{#each accessories}}
+                        <li>
+                            {{name}} ({{price}})
+                        </li>
+                        <br>
+                        <br>
+                    {{/each}}
+                </ul>
+            {{/with}}
+        </ul>
+    </section>
+</div>
