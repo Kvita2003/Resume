@@ -1,4 +1,5 @@
 <div>
+    <h1><strong>Car</strong></h1>
     {{make}}
     <br>
     {{model}} ({{year}})
@@ -11,6 +12,7 @@
             {{#with features}}
                 {{#with interior}}
                     {{#with seats}}
+                    <strong>Seats</strong>
                         <li>
                             {{material}}
                             <br>
@@ -38,26 +40,29 @@
                             {{material}}
                             <br>
                             {{color}}
-                            <div>Display</div>
+                            <br>
+                            <hr>
+                            <strong>Display</strong>
                             <ul>
                                 {{#with display}}
-                                    <li>{{type}}
+                                    <li>
+                                        {{type}}
                                         <br>
-                                        {{size}}
-                                        <br>
-                                        {{resolution}}
+                                       <div>Size: {{size}}</div>
+                                        <div>Resolution: {{resolution}}</div>
                                     </li>
                                 {{/with}}
                             </ul>
                         </li>
                         {{/with}}
+                        <hr>
                         <strong>Audio</strong>
                         <ul>
                             {{#with audio}}
                                 <li>
                                     {{system}}
                                     <br>
-                                    {{speakers}}
+                                    <div>Speakers: {{speakers}}</div>
                                 </li>
                             {{/with}}
                         </ul>
@@ -68,7 +73,7 @@
                     {{#with exterior}}
                         {{#with wheels}}
                             <li>
-                                {{size}}
+                               <div>Size:  {{size}}</div>
                                 <br>
                                 {{type}}
                                 <br>
@@ -100,13 +105,13 @@
                         {{#with safety}}
                         {{#with airbags}}
                             <li>
-                                {{front}}
+                                <div>Front: {{front}}</div>
                                 <br>
-                                {{side}}
+                                 <div>Side: {{side}}</div>
                                 <br>
-                                {{knee}}
+                                 <div>Knee: {{knee}}</div>
                                 <br>
-                                {{rear}}
+                                 <div>Rear: {{rear}}</div>
                             </li>
                         {{/with}}
                         {{/with}}
@@ -121,18 +126,18 @@
                     <li>
                         {{type}}
                         <br>
-                        {{displacement}}
+                        <div>Displacement: {{displacement}}</div>
                         <br>
-                        {{horsepower}}
+                        <div>Horsepower: {{horsepower}}</div>
                         <br>
-                        {{torque}}
+                        <div>Torque:{{torque}}</div>
                         <br>
                         <ul>
                             {{#with transmission}}
                                 <li>
                                     {{type}}
                                     <br>
-                                    {{gears}}
+                                    <div>Gears:{{gears}}</div>
                                 </li>
                             {{/with}}
                         </ul>
@@ -145,11 +150,11 @@
             <ul>
                 {{#with fuel_economy}}
                 <li>
-                    {{city}}
+                    <div>City: {{city}}</div>
                     <br>
-                    {{highway}}
+                    <div>Highway: {{highway}}</div>
                     <br>
-                    {{combined}}
+                    <div>Combined: {{combined}}</div>
                 </li>
                 {{/with}}
             </ul>
@@ -159,19 +164,19 @@
             <ul>
                 {{#with price}}
                     <li>
-                        {{base}}
+                        <div>Base: {{base}}</div>
                         <br>
-                        {{destination}}
+                        <div>Destination: {{destination}}</div>
                         <br>
                         <div>Options</div>
                         <ul>
                             {{#with options}}
                             <li>
-                                {{navigation}}
+                                <div>Navigation: {{navigation}}</div>
                                 <br>
-                                {{ moonroof}}
+                                <div>Moonroof: {{ moonroof}}</div>
                                 <br>
-                                {{premium_paint}}
+                                <div>Premium paint: {{premium_paint}}</div>
                             </li>
                             {{/with}}
                         </ul>
