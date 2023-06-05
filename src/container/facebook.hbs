@@ -4,18 +4,60 @@
         <strong>Users</strong>
         <ul>
             {{#each users}}
-            <li>
-                {{id}}
-                <br>
-                {{name}}
-                <br>
-                {{gender}}
-                <br>
-                {{age}}
-                <br>
+                <li>
+                    {{id}}
+                    <br>
+                    {{name}}
+                    <br>
+                    {{gender}}
+                    <br>
+                    {{age}}
+                    <br>
+                    <hr>
                 <strong>Friends</strong>
-                <ul>
+                 <ul>
                     {{#each friends}}
+                        <li>
+                            {{id}}
+                            <br>
+                            {{gender}}
+                            <br>
+                            {{age}}
+                            <br>
+                            <strong>Groups</strong>
+                            <ul>
+                                {{#each groups}}
+                                <li>
+                                    {{id}}
+                                    <br>
+                                    {{name}}
+                                    <br>
+                                    {{description}}
+                                    <br>
+                                    <hr>
+                                    <strong>Members</strong>
+                                    <ul>
+                                        {{#each members}}
+                                            <li>
+                                                {{id}}
+                                                <br>
+                                                {{name}}
+                                                <br>
+                                                {{gender}}
+                                                <br>
+                                                {{age}}
+                                                <br>
+                                            </li>
+                                        {{/each}}
+                                    </ul>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            <hr>
+    
+                <strong>Mutual_friends</strong>
+                <ul>
+                    {{#each mutual_friends}}
                         <li>
                             {{id}}
                             <br>
@@ -25,7 +67,7 @@
                             <br>
                             {{age}}
                             <br>
-                            <strong>Mutual friends</strong>
+                            <strong>Mutual Friends</strong>
                             <ul>
                                 {{#each mutual_friends}}
                                     <li>
@@ -40,45 +82,44 @@
                                 {{/each}}
                             </ul>
                         </li>
+                        
                     {{/each}}
-                    <br>
-
-                    <strong>Groups</strong>
-        <ul>
-            {{#each groups}}
-                <li>
-                    {{id}}
-                    <br>
-                    {{name}}
-                    <br>
-                    {{description}}
-                    <br>
-        
-
-                    <strong>Members</strong>
-                    <ul>
-                        {{#each members}}
-                        <li>
+                </ul>
+                        </li>
+                    {{/each}}
+                 </ul>
+                </li>
+                <br>
+                <hr>
+            <strong>Groups</strong>
+            <ul>
+                {{#each groups}}
+                    <li>
                         {{id}}
                         <br>
                         {{name}}
                         <br>
-                        {{ gender}}
+                        {{description}}
                         <br>
-                        {{age}}
+                        <hr>
+                 <strong>Members</strong>  
+                 <ul>
+                    {{#each members}}
+                        <li>
+                            {{id}}
+                            <br>
+                            {{name}}
+                            <br>
+                            {{gender}}
+                            <br>
+                            {{age}}
                         </li>
-                        {{/each}}
-
-                    </ul>
+                    {{/each}}
+                 </ul>      
+                    </li>
+                {{/each}}
+            </ul>
             {{/each}}
-            </li>
         </ul>
-        </ul>
-            </li>
-    
-            {{/each}}
-        
-
-        
     </section>
 </div>

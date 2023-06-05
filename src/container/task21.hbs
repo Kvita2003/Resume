@@ -1,0 +1,125 @@
+<main>
+
+            <div class="card">
+                <div class="card-body">
+                    <h1>JavaScript</h1>
+                    
+                {{#with heading}}
+                
+                    {{#with main}}
+                            {{text}}
+                            <br>
+                            <br>
+                            {{#with button_text}}
+                               <button class="btn btn-primary">{{solid}}</button>
+                                <br>
+                                <br>
+                                <button class="btn btn-outline-primary">{{outline}}</button>
+                            {{/with}}
+                        
+                    {{/with}}
+                </div>
+            </div>
+            <br>
+            <br>
+        
+            <div class="card">
+                <div class="card-body">
+                    <h2>Stack Overflow</h2>
+                    {{#with second}}
+                            {{text}}
+                            <br>
+                            <br>
+                            {{#with button_text}}
+                               <button class="btn btn-secondary">{{solid}}</button>
+                                <br>
+                                <br>
+                                <button class="btn btn-outline-secondary">{{outline}}</button>
+                            {{/with}}
+                    {{/with}}
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>JavaScript Weekly</h3>
+                    {{#with subblock}}
+                            {{text}}
+                            <br>
+                            <br>
+                            {{#with button_text}}
+                                <button class="btn btn-dark">{{solid}}</button>
+                                <br>
+                                <br>
+                                <button class="btn btn-outline-dark">{{outline}}</button>
+                            {{/with}}
+                    {{/with}}
+            {{/with}}
+            </div>
+            </div>
+        
+   <br>
+   <br>
+   <div class="card">
+    <div class="card-body">
+        <div class ="display-1"> HTML </div>
+
+    <div class="card">
+    <div class="card-body">
+        <div class ="display-4"> Outdated HTML tags </div>
+            {{#with nested_display}}
+                <br>
+                    {{#with children_display}}
+                            {{text}}
+                            <br>
+                            <br>
+                            {{#with button}}
+                                <button class="btn btn-warning">{{text}}</button>
+                            {{/with}}
+                    {{/with}}
+        </div>
+    </div>
+            <br>
+            <h6>Sections</h6>
+                    {{#with button}}
+                        <button class="btn btn-info">{{text}}</button>
+                    {{/with}}
+                </ul>
+            </li>
+        </ul>
+            {{/with}}
+    </section>
+    
+    </div>
+    </div>
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-body">
+        <div>About modules</div>
+        <br>
+            {{#with paragraph}}
+                    {{text}}
+                    <br>
+                    <br>
+                    {{#with button}}
+                        {{text}} <button class="btn btn-link">{{url}}</button>
+                    {{/with}}
+                    <br>
+                <div class="card">
+                    <div class="card-body">
+                        <ul>
+                    {{#each list_name}}
+                        <li>
+                        {{text}} - <button class="btn btn-link">{{url}}</button>
+                        </li>
+                        </ul>
+                    {{/each}}
+            {{/with}}
+        </div>
+        </div>
+        </div>
+    </div>
+</main>
