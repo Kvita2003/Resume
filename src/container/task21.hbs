@@ -105,7 +105,7 @@
                     <br>
                     <br>
                     {{#with button}}
-                        {{text}} <button class="btn btn-link">{{url}}</button>
+                        <a href="{{url}}" class="btn btn-link">{{text}}</a>
                     {{/with}}
                     <br>
                 <div class="card">
@@ -113,7 +113,7 @@
                         <ul>
                     {{#each list_name}}
                         <li>
-                        {{text}} - <button class="btn btn-link">{{url}}</button>
+                        <a href="{{url}}" class="btn btn-link">{{text}}</a>
                         </li>
                         </ul>
                     {{/each}}
