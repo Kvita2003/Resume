@@ -1,0 +1,113 @@
+<main>
+    <h1 class="text-center">InnovaMind</h1>
+    <div class="text-center">
+    {{#with page_header}}
+        {{description}}
+    {{/with}}
+    </div>
+    <div class="card">
+        <div class="card-body">
+            {{#with section}}
+            {{#with about_us}}
+                {{#with title_list}}
+                       <div class="display-6 text-end">{{main}}</div> 
+                        <br>
+                        <h2 class="text-end">{{sub}}</h2>
+                        <br>
+                {{/with}}
+                {{#with button}}
+                        <button class="btn btn-outline-info">{{text}}</button>
+                {{/with}}
+            {{/with}}
+            </div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="display-5 text-muted">Advantage</div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                   <div class="display-4 text-muted">Efficiency</div> 
+                   {{#with advantage}}
+                        {{#with efficiency}}
+                        <br>
+                            <h6>{{sub_title}}</h6>
+                            <br>
+                            {{description}}
+                            <br>
+                            <br>
+                            <button class="btn btn-outline-warning">{{button}}</button>
+                        {{/with}}
+                </div>
+            </div>
+            <br>
+            <br>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="display-4 text-muted text-center">Innovation</div> 
+                                <br>
+                                {{#with innovation}}
+                                    <h6 class="text-center">{{sub_title}}</h6>
+                                    <br>
+                                    <div class="text-center">{{description}}</div>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-outline-warning">{{button}}</button>
+                                {{/with}}
+                            </div>
+                        </div>
+
+                    <br>
+                    <div class="card">
+                            <div class="card-body">
+                                <div class="display-4 text-muted text-end">Collaboration</div> 
+                                <br>
+                                {{#with collaboration}}
+                                    <h6 class="text-end">{{sub_title}}</h6>
+                                    <br>
+                                    <div class="text-end">{{description}}</div>
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-outline-warning">{{button}}</button>
+                                {{/with}}
+                            </div>
+                        </div>
+                    
+                   {{/with}}
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="display-5">Terms of use</div>
+                <div class="card">
+                    <div class="card-body">
+                        {{#with agreement}}
+                            {{#with info}}
+                                <h5>{{sub_title}}</h5>
+                                <div class="card">
+                                    <div class="card-body">
+                                        {{#with detail}}
+                                            {{text}}
+                                            <br>
+                                            <br>
+                                            <button class="btn btn-success">{{button}}</button>
+                                        {{/with}}
+                                    </div>
+                                </div>
+                            {{/with}}
+                        {{/with}}
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     {{/with}}
+</main>
