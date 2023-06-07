@@ -1,0 +1,142 @@
+<main>
+    {{#with navigation}}
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="nav">
+                            {{#each links}}
+                                <div class="nav-item">
+                                    <a class="nav-link
+                                    {{#if @last}}disabled{{/if}}"
+                                     href="{{href}}">
+                                    {{text}}
+                                    </a>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+
+    {{#with header}}
+        <h3 class="pt-5">{{title}}</h3>
+        {{#with button}}
+            <button class="btn btn-outline-secondary mt-2"
+            href="{{link}}">{{text}}</button>
+        {{/with}}
+    {{/with}}
+
+    <hr>
+
+    {{#each goodsBlock}}
+        <div class="card col-12 mb-3" style="max-width: 640px;">
+  <div class="row gx-1">
+    <div class="col-4">
+      <img src="{{image}}" class="card-img">
+    </div>
+    <div class="col-3">
+      <div class="card-body ">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text"><small>{{description}}</small></p>
+      </div>
+    </div>
+    <div class="col-2 pt-5">
+        {{#with price}}
+           <h6>{{title}}:</h6>
+           <p>{{value}}</p>
+        {{/with}}
+    </div>
+
+    <div class="col-1 pt-5 my-3">
+        {{amount}}
+    </div>
+
+    <div class="col-2 pt-3">
+        {{#each buttons}}
+        <button class="mt-3 {{#if isPrimary}}btn btn-primary
+        {{else if isDanger}}btn btn-outline-danger{{/if}}">
+        {{text}}</button>
+    {{/each}}
+    </div>
+  </div>
+</div>
+    {{/each}}
+
+    <hr>
+
+    {{#with total}}
+        <h3 class="mt-5">{{title}}</h3>
+        <h4>{{amount}}</h4>
+        <div>{{delivery}}</div>
+
+        {{#each buttons}}
+        <div class="row">
+        <div class="col-5 pt-3">
+                <a href="{{link}}" class="{{#if isSuccess}}
+                btn btn-success{{else if isOutline}}
+                btn btn-outline-success{{/if}}">{{text}}</a>
+            </div>
+        </div>
+        {{/each}}
+    {{/with}}
+
+    <hr>
+
+    {{#with goodsOtherBlock}}
+        <h3 class="text-center mt-5">{{title}}</h3>
+        <div class="row">
+        {{#each cards}}
+    <section class="col-4 ">
+                    <div class="card">
+                        <img class="card-img-top" src="{{image}}">
+                        <div class="card-body">
+                    </div>
+                <h6 class="card-title">{{title}}
+                        {{#if isHot includeZero=true}}
+                            <span class="badge text-bg-warning rounded-pill text-uppercase">Hot</span>
+                        {{/if}}
+                        {{#if isNew includeZero=true}}
+                            <span class="badge text-bg-primary rounded-pill text-uppercase">New</span>
+                        {{/if}}
+                </h6>
+                <p>{{description}}</p>
+            </div>
+    </section>
+    {{/each}}
+    </div>
+    {{/with}}
+
+    <hr>
+
+    <div class="alert alert-dark mt-5 mb-5">
+        {{#with subscribe}}
+            <h2>{{header}}</h2>
+            <p>{{description}}</p>
+             <div class="row">
+            {{#each buttons}}
+                <a href="{{link}}">
+                    <button class="btn btn-primary mt-3">{{text}}</button>
+                </a>
+            {{/each}}
+            </div>
+        {{/with}}
+    </div>
+
+    <hr>
+
+     <div class="row">
+                {{#each footer}}
+                    <ul class="nav-item col-2">
+                        {{#each this}}
+                        <ol>
+                            <a class="{{#if @last}}nav-link disabled{{/if}}" 
+                            href="{{link}}">{{text}}</a>
+                        </ol>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            </div>
+</main>
