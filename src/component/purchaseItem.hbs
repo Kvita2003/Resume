@@ -1,0 +1,16 @@
+ <div class="col-4">
+            
+            <div class="row gx-2">
+            {{#each images}}
+                 <img src="{{this}}" class="col-3 pt-3" style="max-width: 640px;">
+            {{/each}}
+            </div>
+        </div>
+
+        <div class="col-2 py-4">
+            {{#with button}}
+                <button href="{{link}}" class="{{#if isPrimary}}
+                btn btn-primary{{/if}}">{{text}}</button>
+            {{/with}}
+        </div>
+    </div>
