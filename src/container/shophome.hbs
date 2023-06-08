@@ -116,25 +116,22 @@
 
     <hr>
     
-       
-      <div class="row">              
+                   
         <div class="card">
         <div class="card-body">
-         {{#each footer}}
-               <ul class="nav-item">
-                 <div class="col-2">
-                {{#each this}}
-                <li>
-                    <a href="{{link}}">{{text}}</a>
-                </li>
+         <div class="row">
+                {{#each footer}}
+                    <ul class="nav-item col-2">
+                        {{#each this}}
+                        <ol>
+                            <a class="nav-link {{#if @last}}disabled{{/if}}" 
+                            href="{{link}}">{{text}}</a>
+                        </ol>
+                        {{/each}}
+                    </ul>
                 {{/each}}
-                
-               
-        </div>
-               </ul> 
-        {{/each}}
-    </div>
-    </div>    
+            </div>
+    </div>  
     
     </div>
 </main>
