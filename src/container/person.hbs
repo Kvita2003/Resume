@@ -2,8 +2,7 @@
     {{#with person}}
         <div>
             <h1>{{name}}</h1>
-            {{age}}
-            <br>
+            <div class="mt-1 mb-2">{{age}}</div>
             {{gender}}
         </div>
 
@@ -13,13 +12,9 @@
                 {{#with address}}
                 <li>
                    {{street}}
-                   <br>
-                   {{city}}
-                   <br>
+                   <div class="mt-2 mb-2">{{city}}</div>
                    {{state}}
-                   <br>
-                   {{zip}}
-                   <br>
+                   <div class="mb-2 mt-2">{{zip}}</div>
                    {{country}}
                 </li>
                 {{/with}}
@@ -35,11 +30,9 @@
                     <li>
                        {{degree}}
                     </li>
-                        <br>
                     <li>
                         {{major}}
                     </li>
-                        <br>
                     <li>
                         {{university}}
                     </li>

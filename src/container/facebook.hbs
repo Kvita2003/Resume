@@ -6,47 +6,33 @@
             {{#each users}}
                 <li>
                     {{id}}
-                    <br>
-                    {{name}}
-                    <br>
+                    <div class="mb-2">{{name}}</div>
                     {{gender}}
-                    <br>
-                    {{age}}
-                    <br>
+                    <div class="mb-2">{{age}}</div>
                     <hr>
                 <strong>Friends</strong>
                  <ul>
                     {{#each friends}}
                         <li>
                             {{id}}
-                            <br>
-                            {{gender}}
-                            <br>
-                            {{age}}
-                            <br>
+                           <div class="mb-2">{{gender}}</div>
+                            <div class="mb-2">{{age}}</div>
                             <strong>Groups</strong>
                             <ul>
                                 {{#each groups}}
                                 <li>
                                     {{id}}
-                                    <br>
-                                    {{name}}
-                                    <br>
-                                    {{description}}
-                                    <br>
+                                    <div class="mb-2">{{name}}</div>
+                                    <div class="mb-2">{{description}}</div>
                                     <hr>
                                     <strong>Members</strong>
                                     <ul>
                                         {{#each members}}
                                             <li>
                                                 {{id}}
-                                                <br>
-                                                {{name}}
-                                                <br>
+                                                <div class="mb-2 mt-2">{{name}}</div>
                                                 {{gender}}
-                                                <br>
-                                                {{age}}
-                                                <br>
+                                                <div class="mt-2 mb-2">{{age}}</div>
                                             </li>
                                         {{/each}}
                                     </ul>
@@ -60,24 +46,18 @@
                     {{#each mutual_friends}}
                         <li>
                             {{id}}
-                            <br>
-                            {{name}}
-                            <br>
+                            <div class="mb-2 mt-2">{{name}}</div>
                             {{gender}}
-                            <br>
-                            {{age}}
-                            <br>
+                            <div class="mb-2 mt-2">{{age}}</div>
+
                             <strong>Mutual Friends</strong>
                             <ul>
                                 {{#each mutual_friends}}
                                     <li>
                                         {{id}}
-                                        <br>
-                                        {{name}}
-                                        <br>
+                                        <div class="mb-2 mt-2">{{name}}</div>
                                         {{gender}}
-                                        <br>
-                                        {{age}}
+                                        <div class="mb-2 mt-2">{{age}}</div>
                                     </li>
                                 {{/each}}
                             </ul>
@@ -89,30 +69,23 @@
                     {{/each}}
                  </ul>
                 </li>
-                <br>
                 <hr>
             <strong>Groups</strong>
             <ul>
                 {{#each groups}}
                     <li>
                         {{id}}
-                        <br>
-                        {{name}}
-                        <br>
+                        <div class="mb-2 mt-2">{{name}}</div>
                         {{description}}
-                        <br>
                         <hr>
                  <strong>Members</strong>  
                  <ul>
                     {{#each members}}
                         <li>
                             {{id}}
-                            <br>
-                            {{name}}
-                            <br>
+                            <div class="mb-2 mt-2">{{name}}</div>
                             {{gender}}
-                            <br>
-                            {{age}}
+                           <div class="mb-2 mt-2">{{age}}</div>
                         </li>
                     {{/each}}
                  </ul>      

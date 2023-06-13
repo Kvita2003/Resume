@@ -7,52 +7,43 @@
                 {{#with heading}}
                 
                     {{#with main}}
-                            {{text}}
-                            <br>
-                            <br>
+                            <div class="mb-4">{{text}}</div>
+                            
                             {{#with button_text}}
-                               <button class="btn btn-primary">{{solid}}</button>
-                                <br>
-                                <br>
+                               <div class="mb-4">
+                                <button class="btn btn-primary">{{solid}}</button>
+                                </div>
                                 <button class="btn btn-outline-primary">{{outline}}</button>
                             {{/with}}
                         
                     {{/with}}
                 </div>
             </div>
-            <br>
-            <br>
         
-            <div class="card">
+            <div class="card mt-4">
                 <div class="card-body">
                     <h2>Stack Overflow</h2>
                     {{#with second}}
-                            {{text}}
-                            <br>
-                            <br>
+                            <div class="mb-4">{{text}}</div>
                             {{#with button_text}}
-                               <button class="btn btn-secondary">{{solid}}</button>
-                                <br>
-                                <br>
+                               <div class="mb-4">
+                                <button class="btn btn-secondary">{{solid}}</button>
+                               </div>
                                 <button class="btn btn-outline-secondary">{{outline}}</button>
                             {{/with}}
                     {{/with}}
                 </div>
             </div>
-            <br>
-            <br>
 
-            <div class="card">
+            <div class="card mt-4">
                 <div class="card-body">
                     <h3>JavaScript Weekly</h3>
                     {{#with subblock}}
-                            {{text}}
-                            <br>
-                            <br>
+                            <div class="mb-4">{{text}}</div>
                             {{#with button_text}}
-                                <button class="btn btn-dark">{{solid}}</button>
-                                <br>
-                                <br>
+                                <div class="mb-4">
+                                    <button class="btn btn-dark">{{solid}}</button>
+                                </div>
                                 <button class="btn btn-outline-dark">{{outline}}</button>
                             {{/with}}
                     {{/with}}
@@ -60,29 +51,24 @@
             </div>
             </div>
         
-   <br>
-   <br>
-   <div class="card">
+   <div class="card mt-4">
     <div class="card-body">
         <div class ="display-1"> HTML </div>
 
-    <div class="card">
+    <div class="card mb-2">
     <div class="card-body">
         <div class ="display-4"> Outdated HTML tags </div>
             {{#with nested_display}}
-                <br>
                     {{#with children_display}}
-                            {{text}}
-                            <br>
-                            <br>
+                            <div class="mb-4">{{text}}</div>
                             {{#with button}}
                                 <button class="btn btn-warning">{{text}}</button>
                             {{/with}}
                     {{/with}}
         </div>
     </div>
-            <br>
-            <h6>Sections</h6>
+
+            <h6 class="mt-3">Sections</h6>
                     {{#with button}}
                         <button class="btn btn-info">{{text}}</button>
                     {{/with}}
@@ -94,20 +80,16 @@
     
     </div>
     </div>
-    <br>
-    <br>
-    <div class="card">
+    
+    <div class="card mt-4">
         <div class="card-body">
         <div>About modules</div>
         <br>
             {{#with paragraph}}
-                    {{text}}
-                    <br>
-                    <br>
+                    <div class="mb-4">{{text}}</div>
                     {{#with button}}
-                        <a href="{{url}}" class="btn btn-link">{{text}}</a>
+                        <a href="{{url}}" class="btn btn-link mb-2">{{text}}</a>
                     {{/with}}
-                    <br>
                 <div class="card">
                     <div class="card-body">
                         <ul>
