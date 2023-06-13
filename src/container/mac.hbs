@@ -1,12 +1,8 @@
 <div>
-    <h1>{{name}}</h1>
-    <br>
-    {{description}}
-    <br>
-    {{price}}
-    <br>
+    <h1 class="mb-4">{{name}}</h1>
+    <div class="mb-2">{{description}}</div>
+    <div class="mb-2">{{price}}</div>
     <strong>Category:</strong> {{category}}
-    <br>
     <hr>
     <section>
         <ul>
@@ -15,13 +11,9 @@
                 {{#with processor}}
                     <li>
                         {{brand}}
-                        <br>
-                        {{model}}
-                        <br>
+                        <div class="mb-2 mt-2">{{model}}</div>
                         {{speed}}
-                        <br>
-                        {{cores}}
-                        <br>
+                        <div class="mt-2 mb-2">{{cores}}</div>
                         {{cache}}
                     </li>
                 {{/with}}
@@ -30,9 +22,7 @@
                     {{#with memory}}
                     <li>
                         {{type}}
-                        <br>
-                        {{size}}
-                        <br>
+                        <div class="mb-2 mt-2">{{size}}</div>
                         {{speed}}
                     </li>
                     {{/with}}
@@ -40,8 +30,7 @@
                 <ul>
                     {{#with storage}}
                     <li>
-                        {{type}}
-                        <br>
+                        <div class="mb-2">{{type}}</div>
                         {{size}}
                     </li>
                     {{/with}}
@@ -52,16 +41,11 @@
                     {{#with display}}
                     <li>
                         {{size}}
-                        <br>
-                        {{resolution}}
-                        <br>
+                        <div class="mb-2 mt-2">{{resolution}}</div>
                         {{technology}}
-                        <br>
-                        {{color_space}}
-                        <br>
+                        <div class="mb-2 mt-2">{{color_space}}</div>
                         {{brightness}}
-                        <br>
-                        {{refresh_rate}}
+                        <div class="mb-2 mt-2">{{refresh_rate}}</div>
                     </li>
                     {{/with}}
                 </ul>
@@ -70,9 +54,7 @@
                     {{#with graphics}}
                     <li>
                         {{brand}}
-                        <br>
-                        {{model}}
-                        <br>
+                        <div class="mt-2 mb-2">{{model}}</div>
                         {{memory}}
                         
                     {{/with}}
@@ -83,9 +65,7 @@
                     {{#each ports}}
                     <li>
                         {{type}}
-                        <br>
-                        {{cont}}
-                        <br>
+                        <div class="mb-2 mt-2">{{cont}}</div>
                         <ul>
                             {{#each features}}
                                 <li>{{this}}</li>
@@ -99,9 +79,7 @@
                     {{#with battery}}
                         <li>
                             {{type}}
-                            <br>
-                            {{capacity}}
-                            <br>
+                            <div class="mt-2 mb-2">{{capacity}}</div>
                             {{life}}
                         </li>
                     {{/with}}
@@ -114,14 +92,11 @@
                     {{#with dimensions}}
                         <li>
                             {{height}}
-                            <br>
-                            {{width}}
-                            <br>
+                            <div class="mt-2 mb-2">{{width}}</div>
                             {{depth}}
                         </li>
                     {{/with}}
                 </ul>
-                <br>
                 <hr>
                 {{operating_system}}
                 <hr>
@@ -130,10 +105,8 @@
                 <ul>
                     {{#each accessories}}
                         <li>
-                            {{name}} ({{price}})
+                            <div class="mb-4">{{name}} ({{price}})</div>
                         </li>
-                        <br>
-                        <br>
                     {{/each}}
                 </ul>
             {{/with}}

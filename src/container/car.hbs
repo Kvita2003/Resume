@@ -1,8 +1,6 @@
 <div>
-    {{make}}
-    <br>
-    {{model}} ({{year}})
-    <br>
+    <div class="mb-1">{{make}}</div>
+    <div class="mb-1">{{model}} ({{year}})</div>
     {{color}}
     <hr>
     <section>
@@ -12,10 +10,8 @@
                 {{#with interior}}
                     {{#with seats}}
                         <li>
-                            {{material}}
-                            <br>
-                            {{color}}
-                            <br>
+                            <div class="mb-1">{{material}}</div>
+                            <div class="mb-1">{{color}}</div>
                              {{#unless heated includeZero=true}}  {{/unless}}
 
                             {{#unless heated}}
@@ -35,16 +31,14 @@
                     <ul>
                         {{#with dashboard}}
                         <li>
-                            {{material}}
-                            <br>
+                            <div class="mb-1">{{material}}</div>
                             {{color}}
                             <div>Display</div>
                             <ul>
                                 {{#with display}}
-                                    <li>{{type}}
-                                        <br>
-                                        {{size}}
-                                        <br>
+                                    <li>
+                                        {{type}}
+                                        <div class="mt-1 mb-1">{{size}}</div>
                                         {{resolution}}
                                     </li>
                                 {{/with}}
@@ -55,8 +49,7 @@
                         <ul>
                             {{#with audio}}
                                 <li>
-                                    {{system}}
-                                    <br>
+                                    <div class="mb-1">{{system}}</div>
                                     {{speakers}}
                                 </li>
                             {{/with}}
@@ -69,17 +62,14 @@
                         {{#with wheels}}
                             <li>
                                 {{size}}
-                                <br>
-                                {{type}}
-                                <br>
+                                <div class="mt-1 mb-1">{{type}}</div>
                                 {{color}}
                             </li>
                         {{/with}}
                         <ul>
                         {{#with headlights}}
                             <li>
-                                {{type}}
-                                <br>
+                                <div class="mb-1">{{type}}</div>
                                 {{brightness}}
                             </li>
                         {{/with}}
@@ -88,8 +78,7 @@
                         <ul>
                             {{#with sunroof}}
                                 <li>
-                                    {{type}}
-                                    <br>
+                                    <div class="mb-1">{{type}}</div>
                                     {{size}}
                                 </li>
                             {{/with}}
@@ -101,12 +90,9 @@
                         {{#with airbags}}
                             <li>
                                 {{front}}
-                                <br>
-                                {{side}}
-                                <br>
+                                <div class="mb-1 mt-1">{{side}}</div>
                                 {{knee}}
-                                <br>
-                                {{rear}}
+                                <div class="mb-1 mt-1">{{rear}}</div>
                             </li>
                         {{/with}}
                         {{/with}}
@@ -120,18 +106,13 @@
                 {{#with engine}}
                     <li>
                         {{type}}
-                        <br>
-                        {{displacement}}
-                        <br>
+                        <div class="mt-1 mb-1">{{displacement}}</div>
                         {{horsepower}}
-                        <br>
-                        {{torque}}
-                        <br>
+                        <div class="mb-1 mt-1">{{torque}}</div>
                         <ul>
                             {{#with transmission}}
                                 <li>
-                                    {{type}}
-                                    <br>
+                                    <div class="mb-1">{{type}}</div>
                                     {{gears}}
                                 </li>
                             {{/with}}
@@ -146,9 +127,7 @@
                 {{#with fuel_economy}}
                 <li>
                     {{city}}
-                    <br>
-                    {{highway}}
-                    <br>
+                    <div class="mb-1">{{highway}}</div>
                     {{combined}}
                 </li>
                 {{/with}}
@@ -160,18 +139,14 @@
                 {{#with price}}
                     <li>
                         {{base}}
-                        <br>
-                        {{destination}}
-                        <br>
+                        <div class="mb-1 mt-1">{{destination}}</div>
                         <div>Options</div>
                         <ul>
                             {{#with options}}
                             <li>
                                 {{navigation}}
-                                <br>
-                                {{ moonroof}}
-                                <br>
-                                {{premium_paint}}
+                                <div class="mb-1 mt-1">{{ moonroof}}</div>
+                                <div class="mb-3">{{premium_paint}}</div>
                             </li>
                             {{/with}}
                         </ul>
